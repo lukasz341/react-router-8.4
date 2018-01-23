@@ -5,10 +5,18 @@ import store from './store';
 import DevTools from './DevTools.js';
 import {getCountries} from './actions/action-countries';
 
+const Root = () => {
+    return (
+        <div>
+            <h1> Aplikacja wyszukiwanie krajów </h1>
+            <DevTools />  
+        </div>       
+   )   
+  }
 
 render( 
     <Provider store={store}>       
-        <DevTools />   
+        <Root />   
     </Provider>,
     document.getElementById('root')
 );
