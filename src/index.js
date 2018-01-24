@@ -4,12 +4,16 @@ import { Provider } from 'react-redux';
 import store from './store';
 import DevTools from './DevTools.js';
 import {getCountries} from './actions/action-countries';
+import routes from './routes';
+import { Router, Route, hashHistory } from 'react-router';
+import Navigation from './presentational/navigation.component';
+import styles from './country.css';
 
 const Root = () => {
     return (
         <div>
-            <h1> Aplikacja wyszukiwanie krajów </h1>
-            <DevTools />  
+            <DevTools /> 
+            <Router history={hashHistory} routes={routes}/>
         </div>       
    )   
   }
